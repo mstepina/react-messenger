@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {style} from "./styles";
-import { userInfo } from 'os';
+//import { userInfo } from 'os';
 
 export interface Dialog {
     name: string,
@@ -36,10 +36,6 @@ export let dialogList : DialogList = [
 ]
 
 
-function List(props: Props) {
-
-}
-
 export const taskTestData: Props = {
     item: dialogList
 }
@@ -52,25 +48,9 @@ export const taskTestData: Props = {
 //     message: "Henlo!"
 // }
 
-export const TaskComponent = (props: Props) => {
+export const DialogsComponent = (props: Props) => {
    
-    //let arr = [];
-    /*
-    return <div style={style}>
-            {props.item[0].name}
-            <div style={style}>
-                {props.item[0].date}
-              </div>
-            </div>
-      */  
-    //);
-        /*
-        arr.push(dialogList[i].image);
-        arr.push(dialogList[i].name);
-        arr.push(String(dialogList[i].date));
-        arr.push(dialogList[i].author);
-        arr.push(dialogList[i].message);
-    */
+   
 
 
     
