@@ -1,7 +1,6 @@
 import React from 'react';
 
 import {style} from "./styles";
-//import { userInfo } from 'os';
 
 export interface Dialog {
     name: string,
@@ -21,7 +20,7 @@ export let dialogList : DialogList = [
     {
         name: 'Shoobsters',
         image:"https://image.flaticon.com/icons/svg/146/146025.svg",
-        date: new Date (Date.UTC(2012, 11, 12, 3, 0, 0)),
+        date: new Date (Date.UTC(2020, 11, 13, 3, 0, 0)),
         author: "Rita",
         message: "Henlo!"
     },
@@ -40,19 +39,13 @@ export const taskTestData: Props = {
     item: dialogList
 }
 
-// export const taskTestData2: Dialog = {
-//     name: 'Shoobsters',
-//     image:"https://image.flaticon.com/icons/svg/146/146025.svg",
-//     date: new Date ("29/04/2020"),
-//     author: "Rita",
-//     message: "Henlo!"
-// }
 
 export const DialogsComponent = (props: Props) => {
-    
-    
-    
-    
+    //console.log(typeof(props.item[0].date))   
+    //console.log(props.item[0].date.valueOf()) 
+    props.item.sort((a, b) => b.date.valueOf() - a.date.valueOf())
+
+
     
     function formatDate(date: Date) {
         const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
@@ -71,25 +64,8 @@ export const DialogsComponent = (props: Props) => {
                         <p>{p.author}: <span id ="mess">{p.message}</span></p>
                     </div>
                     
-                
-                    {/* <p id="name">{p.name}</p>
-                    <p id="date">{formatDate(p.date)}</p>
-                    <p id="author">{p.author}</p>
-                    <p >{p.message}</p>  */}
-                    
                 </div>
                 )
             })}
     </div>)
     }
-    
-    /*
-    return (<div className="dialog-list" style={style}>
-        {props.item[0].name}
-        <br/>
-        <div>
-        {props.item[0].author}
-        </div>
-    </div>)
-    */
-
